@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#11131b">
+    <meta name="description" content="A tiny game for learning the practical coding skills every student needs.">
+    <title>CodeQuest — Learn by doing</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="#" aria-label="CodeQuest home">
+          <span class="brand-mark" aria-hidden="true">&lt;/&gt;</span>
+          <span>code<span class="brand-accent">quest</span></span>
+        </a>
+        <div class="topbar-right">
+          <span class="streak-pill"><span aria-hidden="true">✦</span> Your first quest starts here</span>
+          <div class="avatar" aria-label="Player profile">C</div>
+        </div>
+      </header>
+
+      <main>
+        <section class="welcome">
+          <div class="welcome-copy">
+            <p class="eyebrow"><span class="status-dot"></span> YOUR LEARNING ADVENTURE</p>
+            <h1>Small steps.<br><span class="gradient-text">Big builder energy.</span></h1>
+            <p class="welcome-description">Level up the skills you’ll actually use in college and beyond. One quick quest at a time.</p>
+          </div>
+          <div class="level-card" aria-label="Your learning progress">
+            <div class="level-topline"><span>YOUR PROGRESS</span><span id="level-label">LEVEL 1</span></div>
+            <div class="level-number" id="level-number">01 <span>Curious beginner</span></div>
+            <div class="progress-track" role="progressbar" aria-label="Missions completed" aria-valuemin="0" aria-valuemax="18" aria-valuenow="0">
+              <div class="progress-fill" id="progress-fill"></div>
+            </div>
+            <div class="level-foot"><span id="progress-label">0 of 6 quests complete</span><span id="xp-label">0 XP</span></div>
+          </div>
+        </section>
+
+        <section class="game-layout" aria-label="Learning quests">
+          <aside class="quest-panel">
+            <div class="panel-heading">
+              <div>
+                <p class="eyebrow">THE QUEST BOARD</p>
+                <h2>Pick your path</h2>
+              </div>
+              <span class="quest-count" id="quest-count">0 / 6</span>
+            </div>
+            <div class="quest-list" id="quest-list" aria-label="Available quests"></div>
+            <div class="tip-card">
+              <span class="tip-icon" aria-hidden="true">✳</span>
+              <div><strong>New to this?</strong><p>That’s the perfect place to start. Every quest has hints.</p></div>
+            </div>
+          </aside>
+
+          <section class="mission-card" id="mission-card" aria-live="polite"></section>
+        </section>
+      </main>
+      <footer><span>MADE FOR CURIOUS MINDS</span><span>Learn it. Try it. Build something real.</span></footer>
+    </div>
+  </body>
+</html>
